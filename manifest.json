@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "IFtoFOR",
+    "description": "This extension changes code words by other words, helping developers to have problems to understand code examples. If you want some challenge, try it out!",
+    "version": "1.0",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "processor.js"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "default-src 'self'"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "main.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

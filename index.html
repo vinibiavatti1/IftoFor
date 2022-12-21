@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFtoFOR</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h3>IF to For (by ViniB)</h3>
+    <div class="mb">
+        <p>
+            This extension changes code words by other words, helping developers to have problems to understand code examples. 
+            If you want some challenge, try it out!
+        </p>
+        <p>
+            Note: The tool will only look at &#60;code/&#62; tags to replace the content.
+        </p>
+    </div>
+    <div class="mb checkbox-container">
+        <label for="active-box">Check to activate:</label>
+        <input id="active-box" type="checkbox" />
+    </div>
+    <div class="mb">
+        <button id="btn-plus">add</button>
+        <button id="btn-clean">clean</button>
+        <button id="btn-reset">restore</button>
+    </div>
+    <table class="mb">
+        <thead>
+            <tr>
+                <th>from</th>
+                <th>to</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="records">
+        </tbody>
+    </table>
+</body>
+
+<!-- Scripts -->
+<script src="main.js"></script>
+
+<!-- Templates -->
+<template id="record">
+    <tr>
+        <td><input class="target" placeholder="target" value="{{target}}" /></td>
+        <td><input class="replace" placeholder="replace" value="{{replace}}" /></td>
+        <td><button class="btn-remove">x</button></td>
+    </tr>
+</template>
+</html>

@@ -1,0 +1,37 @@
+* {
+    font-family: monospace;
+}
+
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid;
+}
+table tbody tr td {
+    padding: 0px;
+}
+.mb {
+    margin-bottom: 4px;
+}
+input {
+    border: none;
+    outline: none;
+    font-size: 11px;
+}
+button {
+    outline: none;
+    background-color: rgba(0, 0, 0, .15);
+    border: none;
+    border-radius: 2px;
+}
+button:hover {
+    background-color: rgba(0, 0, 0, .20);
+}
+button:active {
+    background-color: rgba(0, 0, 0, .25);
+}
+.checkbox-container {
+    display: flex!important; 
+    align-items: center;
+}
